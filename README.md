@@ -44,3 +44,5 @@ make
 ### Icon
 
 ![nml](https://github.com/tamada/nml/blob/main/docs/static/images/nml.svg)
+
+This image is obtained from [freesvg.org](https://freesvg.org/zz-bell-silver)
