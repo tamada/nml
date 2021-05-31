@@ -3,6 +3,7 @@
 [![build](https://github.com/tamada/nml/actions/workflows/build.yml/badge.svg)](https://github.com/tamada/nml/actions/workflows/build.yml)
 [![Coverage Status](https://coveralls.io/repos/github/tamada/nml/badge.svg?branch=main)](https://coveralls.io/github/tamada/nml?branch=main)
 [![Go Report Card](https://goreportcard.com/badge/github.com/tamada/nml)](https://goreportcard.com/report/github.com/tamada/nml)
+[![codebeat badge](https://codebeat.co/badges/ad1c690d-9ba3-46f5-87b1-4f68fbdfb882)](https://codebeat.co/projects/github-com-tamada-nml-main)
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg?logo=spdx)](https://github.com/tamada/nml/blob/main/LICENSE)
 
