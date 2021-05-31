@@ -1,12 +1,18 @@
-# nml
+# :alarm_clock: nml
+
+[![build](https://github.com/tamada/nml/actions/workflows/build.yml/badge.svg)](https://github.com/tamada/nml/actions/workflows/build.yml)
+[![Coverage Status](https://coveralls.io/repos/github/tamada/nml/badge.svg?branch=main)](https://coveralls.io/github/tamada/nml?branch=main)
+[![Go Report Card](https://goreportcard.com/badge/github.com/tamada/nml)](https://goreportcard.com/report/github.com/tamada/nml)
+
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg?logo=spdx)](https://github.com/tamada/nml/blob/main/LICENSE)
 
 Notify me later!
 
-## Description
+## :speaking_head: Description
 
 
 
-## Usage
+## :runner: Usage
 
 ```sh
 nml [OPTIONS] <NUMBER> [-- <COMMANDS...>]
@@ -25,23 +31,23 @@ COMMANDS
     "MESSAGE FROM NML ARRIVE!! (<NUMBER> <UNIT> left)" to STDOUT.
 ```
 
-## Compile
+## :muscle: Compile
 
 ```
 make
 ```
 
-## About
+## :smile: About
 
-### Authors
+### :man_office_worker: Authors :woman_office_worker:
 
 * Haruaki Tamada ([tamada](https://github.com/tamada))
 
-### License
+### :scroll: License
 
 [Apache 2.0](https://github.com/tamada/nml/blob/main/LICENSE)
 
-### Icon
+### :jack_o_lantern: Icon
 
 ![nml](https://github.com/tamada/nml/blob/main/docs/static/images/nml.svg)
 
