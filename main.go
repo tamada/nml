@@ -17,16 +17,29 @@ OPTIONS
                           Available units are: nsec, msec, sec, min, and hour.
     -h, --help            prints this message.
 NUMBER
-    specifies the number for timer.
+    specifies the number for timer by the integer value.
 COMMANDS
     specifies the commands execute after timer.
     If no commands are specified, nml notifies by printing message
     "MESSAGE FROM NML ARRIVE!! (<NUMBER> <UNIT> left)" to STDOUT.`, programName, programName)
 }
 
-func goMain(args []string) int {
-	fmt.Println(helpMessage(args[0]))
+func perform(opts *options) int {
 	return 0
+}
+
+func goMain(args []string) int {
+	opts, err := parseArgs(args)
+	if err != nil {
+		fmt.Printf("parsing args fail: %s\n", err.Error())
+		fmt.Println(helpMessage(filepath.Base(args[0])))
+		return 1
+	}
+	if opts.help {
+		fmt.Println(helpMessage(filepath.Base(args[0])))
+		return 0
+	}
+	return perform(opts)
 }
 
 func main() {
