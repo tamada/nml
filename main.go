@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
+	"time"
 )
 
 func helpMessage(originalProgramName string) string {
@@ -24,8 +25,15 @@ COMMANDS
     "MESSAGE FROM NML ARRIVE!! (<NUMBER> <UNIT> left)" to STDOUT.`, programName, programName)
 }
 
+func handle(opts *options) int {
+	return opts.command.Execute()
+}
+
 func perform(opts *options) int {
-	return 0
+	select {
+	case <-time.After(opts.time.Duration()):
+		return handle(opts)
+	}
 }
 
 func goMain(args []string) int {
