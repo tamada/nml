@@ -127,7 +127,7 @@ func parseArgs(args []string) (*options, error) {
 	flags.BoolVarP(&opts.help, "help", "h", false, "prints this message")
 	flags.Parse(args)
 	if !opts.help {
-		// pflags が "--" を解釈し，削除してしまうため，オリジナルの args も渡している．
+		// pflags parses "--" and removes it, it gives original args to parseArguments function.
 		return parseArguments(opts, flags.Args(), args)
 	}
 	return opts, nil
