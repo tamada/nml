@@ -9,19 +9,19 @@ type timer struct {
 
 func (t *timer) Duration() time.Duration {
 	switch t.unit {
-	case "min":
+	case "min", "minutes":
 		return time.Duration(t.number) * time.Minute
-	case "nsec":
+	case "nsec", "nanoseconds", "nanosec":
 		return time.Duration(t.number) * time.Nanosecond
-	case "usec": // micro seconds
+	case "usec", "microseconds": // micro seconds
 		return time.Duration(t.number) * time.Nanosecond * time.Duration(1000)
-	case "msec":
+	case "msec", "milliseconds":
 		return time.Duration(t.number) * time.Nanosecond * time.Duration(1000000)
-	case "hour":
+	case "hour", "hours":
 		return time.Duration(t.number) * time.Hour
-	case "sec":
+	case "sec", "seconds":
 		return time.Duration(t.number) * time.Second
 	default:
-		return time.Second
+		return time.Duration(t.number) * time.Second
 	}
 }
