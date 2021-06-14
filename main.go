@@ -26,6 +26,9 @@ COMMANDS
 }
 
 func handle(opts *options) int {
+	if opts.header {
+		fmt.Println("========== notification from NML ==========")
+	}
 	return opts.command.Execute()
 }
 
