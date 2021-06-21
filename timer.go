@@ -13,9 +13,9 @@ func (t *timer) Duration() time.Duration {
 		return time.Duration(t.number) * time.Minute
 	case "nsec", "nanoseconds", "nanosec":
 		return time.Duration(t.number) * time.Nanosecond
-	case "usec", "microseconds": // micro seconds
+	case "usec", "microseconds", "microsec": // micro seconds
 		return time.Duration(t.number) * time.Nanosecond * time.Duration(1000)
-	case "msec", "milliseconds":
+	case "msec", "milliseconds", "millisec":
 		return time.Duration(t.number) * time.Nanosecond * time.Duration(1000000)
 	case "hour", "hours":
 		return time.Duration(t.number) * time.Hour
